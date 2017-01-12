@@ -23,17 +23,17 @@ Running
 ### Node.js signaling server
 You'll need to install `node.js` as well as the `express` and `socket.io` libraries:
 ```
-npm install -g socket.io express
+npm install
 ```
 
 Then simply run the signaling server:
 ```
-node signaling-server.js
+node ./signaling-server.js
 ```
 
 ### Web server
-You'll also probably want to host `client.html` on a web server somewhere. You'll need
-to edit `client.html` and change `YOURSERVERNAMEHERE` to be the hostname or IP of 
+You'll also probably want to host `newclient.html` on a web server somewhere. You'll need
+to edit `newclient.html` and change `YOURSERVERNAMEHERE` to be the hostname or IP of 
 the signaling server.
 
 Note: you can also simply open the file locally instead of using a web server,
@@ -42,7 +42,7 @@ webcam/microphone from a file hosted off of your local machine.
 
 
 ### Running the sample
-Now navigate to wherever you stuck `client.html` and you should be presented with
+Now navigate to wherever you stuck `newclient.html` and you should be presented with
 a dialog asking permission to access your microphone / webcam. Once accepted,
 you should see a local stream appear on the page. Now open up the same page in
 another browser, on the same computer or another, and watch as the magic of WebRTC takes
@@ -52,7 +52,7 @@ Repeat with as many browsers as you dare.
 
 Note: At the time of writing this, only firefox and chrome support WebRTC,
 however both browsers support this on Windows, Linux, Mac, and Android, so lots
-of fun can be had pointing everyones' phones, tablets, and laptops at that `client.html`
+of fun can be had pointing everyones' phones, tablets, and laptops at that `newclient.html`
 and bogging down your network with audio/video traffic.
 
 
@@ -71,7 +71,7 @@ this example.
 
 Adapter.js
 ==========
-You'll see `client.html` use `adapter.js`. This "library" just normalizes the
+You'll see `newclient.html` use `adapter.js`. This "library" just normalizes the
 WebRTC API, which will only be necessary while WebRTC is making its way through
 the standards process. Once everything is standardized and functions are
 de-prefixed in the browsers, this won't be necessary anymore.
